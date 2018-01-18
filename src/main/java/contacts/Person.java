@@ -6,9 +6,8 @@ public class Person {
     private String phoneNumber;
     private String eMail;
 
-//    public Person() {
-//
-//    }
+    public Person() {
+    }
 
     public Person(String firstName, String lastName, String phoneNumber, String eMail) {
         this.firstName = firstName;

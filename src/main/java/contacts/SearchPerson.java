@@ -6,8 +6,6 @@ public class SearchPerson {
 
     ObjectMapper objectMapper = new ObjectMapper();
 
-
-
     public void searchByFirstName() {
         System.out.println("Searching by first name");
     }
