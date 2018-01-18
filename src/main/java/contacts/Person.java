@@ -47,4 +47,9 @@ public class Person {
     public void seteMail(String eMail) {
         this.eMail = eMail;
     }
+
+    @Override
+    public String toString() {
+        return getFirstName() + " " + getLastName() + " " + getPhoneNumber() + " " + geteMail();
+    }
 }

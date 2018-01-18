@@ -10,13 +10,16 @@ public class Menu {
     DisplayAllContacts displayAllContacts = new DisplayAllContacts();
     WriteContactToFile writeContactToFile = new WriteContactToFile();
     DataNewPersonFromUser dataNewPersonFromUser = new DataNewPersonFromUser();
+    SearchingPhraseFromUser searchingPhraseFromUser = new SearchingPhraseFromUser();
+
+    private String searchedPhrase = null;
 
     public void showAndRunMenu() throws IOException {
         System.out.println("M__E__N__U");
         System.out.println(); // break line
         System.out.println("1 - Show all contacts");
         System.out.println("2 - Add person");
-        System.out.println("3 - Search  --->>> Under construction");
+        System.out.println("3 - Search");
         System.out.println("4 - Exit");
 
         int selectedItemFromMenu = scanner.nextInt();
@@ -51,16 +54,20 @@ public class Menu {
         int selectedItemFromSearchMenu = scanner.nextInt();
         switch (selectedItemFromSearchMenu) {
             case 1:
-                searchPerson.searchByFirstName();
+                searchedPhrase = searchingPhraseFromUser.searchedPhraseFromUser();
+                searchPerson.searchByFirstName(searchedPhrase);
                 break;
             case 2:
-                searchPerson.searchByLastName();
+                searchedPhrase = searchingPhraseFromUser.searchedPhraseFromUser();
+                searchPerson.searchByLastName(searchedPhrase);
                 break;
             case 3:
-                searchPerson.searchByPhoneNumber();
+                searchedPhrase = searchingPhraseFromUser.searchedPhraseFromUser();
+                searchPerson.searchByPhoneNumber(searchedPhrase);
                 break;
             case 4:
-                searchPerson.searchByMail();
+                searchedPhrase = searchingPhraseFromUser.searchedPhraseFromUser();
+                searchPerson.searchByMail(searchedPhrase);
                 break;
             default:
                 System.out.println("Wrong choice\n");
