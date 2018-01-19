@@ -2,12 +2,11 @@ package bank;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Bank {
-    Currencies ZL = Currencies.ZL;
-
-
-
+    private Map<Currencies, BigDecimal> exchangeRates = new HashMap<>();
 
     public BigDecimal addingToTheAccount(BigDecimal addToAccount, Account account) {
 
@@ -26,4 +25,9 @@ public class Bank {
         addingToTheAccount(howToTransfer, secondAccount);
     }
 
+    public void setExchangeRates(){
+        exchangeRates.put(Currencies.CHF, new BigDecimal(3.54).setScale(2, RoundingMode.HALF_UP));
+        exchangeRates.put(Currencies.USD, new BigDecimal(3.41).setScale(2, RoundingMode.HALF_UP));
+        exchangeRates.put(Currencies.EUR, new BigDecimal(4.17).setScale(2, RoundingMode.HALF_UP));
+    }
 }

@@ -1,7 +1,7 @@
 package bank;
 
 public enum Currencies {
-    ZL,
+    CHF,
     USD,
     EUR
 }
