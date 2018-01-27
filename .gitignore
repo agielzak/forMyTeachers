@@ -1,4 +1,6 @@
-target
-forMyTeachers.iml
-.idea/vcs.xml
-.idea/workspace.xml
+.DS_Store
+.idea/
+*.iml
+target/
+out/
+gen/

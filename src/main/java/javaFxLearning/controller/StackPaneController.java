@@ -2,7 +2,7 @@ package javaFxLearning.controller;
 
 import javafx.fxml.FXML;
 
-import java.awt.*;
+import javafx.scene.control.Button;
 
 public class StackPaneController {
 
